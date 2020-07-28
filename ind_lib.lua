@@ -9,7 +9,6 @@ i = 0
 
 local ref = gui.Reference("Visuals")
 local tab = gui.Tab(ref, "tab_ind_opt", "Indicators Settings")
-local tab_2 = gui.Tab(ref, "tab_ind", "Indicators")
 local gb = gui.Groupbox(tab, "Size", 15, 15, 300, 900)
 local gb_1 = gui.Groupbox(tab, "Position", 325, 15, 300, 900)
 
