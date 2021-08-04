@@ -17,7 +17,7 @@ local fnt_size = gui.Slider(gb, "fnt_size", "Font Size", 27, 12, 48)
 local fnt_weight = gui.Slider(gb, "fnt_weight", "Font Weight", 600, 100, 4000)
 
 local xpos = gui.Slider(gb_1, "xpos", "X Position", 15, 0, w)
-local ypos = gui.Slider(gb_1, "ypos", "Y Position", h/4*3, 0, h)
+local ypos = gui.Slider(gb_1, "ypos", "Y Position", 617, 0, h)
 local dist = gui.Slider(gb_1, "dist", "Distance", 50, 0, 100)
 
 fnt_name:SetDescription("Sets font name for the indicators")
@@ -124,7 +124,7 @@ callbacks.Register("Draw", "Draw Indicators", function()
 			draw.Color(unpack(__ind.color))
 			draw.Text(xpos:GetValue(), y, __ind.text)
 			if __ind.drawCircle then
-				for i = 0, 360 / 100 * __ind.circleP do
+			    for i = 0, 360 / 100 * __ind.circleP do
 			        --local angle = ((i - 90) % 360) * math.pi / 180
 			        local angle = i * math.pi / 180
 			        draw.Color(210, 210, 210, 255)
